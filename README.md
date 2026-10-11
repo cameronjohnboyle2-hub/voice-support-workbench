@@ -6,6 +6,8 @@ A fictional support-agent engineering example by Cameron Boyle, built with AI-as
 
 ![Fictional interrupted support conversation](docs/screenshots/desktop.jpg)
 
+[Try the public transcript replay](https://cameronjohnboyle2-hub.github.io/voice-support-workbench/) · [Verified source checks](https://github.com/cameronjohnboyle2-hub/voice-support-workbench/actions/runs/38116572970) · [Architecture](docs/ARCHITECTURE.md)
+
 ## Try it locally
 
 With Python 3.10+ and Node.js 22+:
