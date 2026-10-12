@@ -6,7 +6,8 @@ Six offline SDK/tool/launcher checks pass, including real SDK pipeline construct
 with HTTP prewarming suppressed, missing-configuration rejection, deadline shutdown
 and failed-start timer cleanup. Combined with the unchanged five policy and nine
 replay checks, the package now contains twenty checks. The earlier clean CI below
-covered sixteen; clean CI for this update is pending.
+covered sixteen. The twenty checks passed in [clean CI for this update](https://github.com/cameronjohnboyle2-hub/voice-support-workbench/actions/runs/38301072152)
+at implementation commit `8e7f4de99e1ffe17097c0f18e7cd2d757b5ce907`.
 
 An isolated US LiveKit Builder prototype reports Running. A consented console
 session connected with two participants and showed Deepgram Nova-3, Gemma 4 31B,
