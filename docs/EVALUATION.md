@@ -11,6 +11,9 @@
 | Simulated tool failure | False success or an uncleared pending request |
 | Prior-state preservation | An invalid event corrupting the current session |
 | Optional SDK tool registration and invocation | Tool binding/output incompatibility before any provider use |
+| Optional real SDK pipeline construction | Constructor/API incompatibility; HTTP prewarming disabled only in this offline test |
+| Missing launcher configuration and deadline | Provider construction without local credentials or an unbounded job |
+| Startup failure and timer cleanup | A greeting after failed startup or an orphaned deadline task |
 
 These assertions are selected application contracts. The authored conversations are not an LLM evaluation dataset, prompt-injection benchmark or empirical task-success experiment.
 
@@ -18,7 +21,9 @@ These assertions are selected application contracts. The authored conversations 
 
 Actual speech acceptance would need consented fictional utterances covering policy answers, unsupported requests, interruption, poor audio, timeout and reconnection. Record model/pipeline versions, answer grounding, correction/escalation behavior, end-of-utterance to first-audio latency, session length and observed provider usage. Separate retries and failed sessions from successful responses. No such measurements are claimed here.
 
-Before any live test, the account owner must establish authenticated admission, a duration limit, concurrency/usage caps, a verified shutdown path and agreed recording/retention settings. This package supplies none of those production services. Public provider sessions remain absent under the zero-spending requirement. Local replay timing is UI timing, not voice latency.
+A separate consented Builder console test connected on October 12 with recognition, model output and synthesis. Optional observability and recording were off. The idle session was ended after roughly three minutes. These results establish connectivity; they do not establish policy-task success or representative latency. The [controlled script](VOICE_SETUP.md) remains pending, and the code-owned launcher's live integration needs its own test.
+
+Use an owner-controlled project and consented fictional utterances for acceptance. Free quota can support that test without a paid upgrade. A public widget/token service would require its own admission, duration, concurrency and privacy review; this package supplies none. Local replay timing remains UI timing, not voice latency.
 
 ## Product judgment
 

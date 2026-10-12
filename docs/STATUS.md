@@ -1,5 +1,29 @@
 # Verification checkpoint
 
+## October 12 update
+
+Six offline SDK/tool/launcher checks pass, including real SDK pipeline construction
+with HTTP prewarming suppressed, missing-configuration rejection, deadline shutdown
+and failed-start timer cleanup. Combined with the unchanged five policy and nine
+replay checks, the package now contains twenty checks. The earlier clean CI below
+covered sixteen; clean CI for this update is pending.
+
+An isolated US LiveKit Builder prototype reports Running. A consented console
+session connected with two participants and showed Deepgram Nova-3, Gemma 4 31B,
+Cartesia Sonic 3 and Python SDK 1.6.10. Optional observability and recording were
+off. The microphone was muted, and the idle session ended after roughly three
+minutes. Provider connectivity is verified; scripted policy-task success,
+audible quality and acoustic interruption remain unverified. No caller audio is
+included. The pinned SDK 1.8.6 code-owned launcher is a separate implementation
+and has not been used in a live room. See [voice setup](VOICE_SETUP.md).
+
+The owner then tried a short session in a noisy setting and reported not hearing
+replies. The console displayed recognition/model/synthesis usage, but listening
+quality is inconclusive. The console is now idle and the microphone is muted.
+No complete policy acceptance or successful audible conversation is claimed.
+
+## Historical October 10/11 checkpoint
+
 October 10 Denver / October 11 UTC, 2026. Five Python policy tests and nine JavaScript turn/identity/recovery tests pass. Browser replay checks cover all three scenarios, restart and a 390-by-844 phone viewport with no horizontal overflow. A connection-blocking content policy is present. Screenshot content is wholly fictional.
 
 The optional SDK environment contains LiveKit Agents 1.8.6 and 68 other installed package versions pinned in requirements-sdk-lock.txt. An OSV exact-version query returned no listed advisories across those 69 packages at this checkpoint. This is a bounded database lookup, not an exhaustive package-security audit. No third-party packages are bundled into the static runtime.

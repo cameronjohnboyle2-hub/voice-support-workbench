@@ -32,7 +32,9 @@ The fictional shop is **Maple Desk**. All policies, product names and dialogue a
 
 ## LiveKit integration boundary
 
-`support/agent.py` registers the same fictional policy function as a LiveKit Agents Python tool. The optional SDK environment is pinned separately. Its offline checks construct the agent, inspect the registered tool and call its policy function without starting a session. There is no provider launcher or credential loading in this repository.
+`support/agent.py` registers the fictional policy function as a LiveKit Agents Python tool. The optional [controlled launcher](support/live.py) connects that agent to a speech/model/synthesis pipeline and limits a job to two minutes. Six offline SDK checks cover tool registration, policy output, real pipeline construction, missing configuration, deadline shutdown and failed-start cleanup. The launcher's live room/tool integration remains untested.
+
+A separate prompt-grounded prototype was deployed through LiveKit Agent Builder. A consented console session connected with speech recognition, model output and synthesis; scripted policy-task success and audible quality still need acceptance. This Builder prototype embeds the invented policies in its prompt and does not use the code-owned tool. No public voice widget or recording is enabled. See [voice setup and evidence boundaries](docs/VOICE_SETUP.md).
 
 ```sh
 python -m venv .venv
@@ -42,7 +44,7 @@ python -m venv .venv
 
 On macOS/Linux use `.venv/bin/python` for the final two commands. The pinned environment was resolved on Python 3.12; other Python/platform combinations need their own compatible-wheel check.
 
-Provider speech, model generation, acoustic interruption, room admission and latency still require separate live acceptance. See [architecture](docs/ARCHITECTURE.md) and [evaluation plan](docs/EVALUATION.md). Installing or importing the SDK does not establish that these flows work.
+Acoustic interruption, answer grounding, room admission and representative latency still require their own acceptance. See [architecture](docs/ARCHITECTURE.md) and [evaluation plan](docs/EVALUATION.md). Provider connectivity or SDK construction alone does not establish those results.
 
 ## Contribution and rights
 
@@ -52,6 +54,6 @@ Original workbench code is presented for review with rights retained; no general
 
 ## Current limits
 
-The replay uses simulated event order and authored response text. Its counts are fixture checks, not task-success rates, measured model latency or cost savings. The adapter has no public token endpoint, provider configuration, persistent logs, order mutation or actual human handoff. These are deliberate scope limits, not implemented capabilities.
+The replay uses simulated event order and authored response text. Its counts are fixture checks, not task-success rates, measured model latency or cost savings. The optional launcher has provider configuration but supplies no public token endpoint, persistent logs, order mutation or actual human handoff. Its SDK may prewarm a connection when a configured pipeline is constructed; the offline construction test suppresses that HTTP prewarming.
 
-The next useful validation is a controlled owner-run voice session after budget, admission, duration and retention controls are agreed. Public paid sessions are disabled by omission under Cameron's zero-spending preference.
+The next validation is completion of the consented fictional voice script, followed by a separate live check of the code-owned launcher. Use existing free quota where available; no paid upgrade is required. Public admission, concurrency and privacy controls would need their own review before a public voice service is enabled.
