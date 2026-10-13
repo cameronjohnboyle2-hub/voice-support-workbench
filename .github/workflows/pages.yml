@@ -1,4 +1,4 @@
-name: Publish transcript replay
+name: Publish voice workbench
 on:
   workflow_dispatch:
 permissions:
@@ -22,9 +22,11 @@ jobs:
       - name: Check contracts and syntax
         run: |
           python -m unittest discover -s tests -p 'test_*.py'
-          node --test tests/replay.test.mjs
+          node --test tests/replay.test.mjs tests/voice-demo.test.mjs
           node --check site/app.mjs
-      - name: Upload only replay runtime
+          node --check site/voice-demo.mjs
+          node --check site/widget-status.mjs
+      - name: Upload only website runtime
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
@@ -35,6 +37,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy replay
+      - name: Deploy workbench
         id: deployment
         uses: actions/deploy-pages@v4

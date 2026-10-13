@@ -9,19 +9,22 @@ replay checks, the package now contains twenty checks. The earlier clean CI belo
 covered sixteen. The twenty checks passed in [clean CI for this update](https://github.com/cameronjohnboyle2-hub/voice-support-workbench/actions/runs/38301072152)
 at implementation commit `8e7f4de99e1ffe17097c0f18e7cd2d757b5ce907`.
 
-An isolated US LiveKit Builder prototype reports Running. A consented console
-session connected with two participants and showed Deepgram Nova-3, Gemma 4 31B,
-Cartesia Sonic 3 and Python SDK 1.6.10. Optional observability and recording were
-off. The microphone was muted, and the idle session ended after roughly three
-minutes. Provider connectivity is verified; scripted policy-task success,
-audible quality and acoustic interruption remain unverified. No caller audio is
-included. The pinned SDK 1.8.6 code-owned launcher is a separate implementation
-and has not been used in a live room. See [voice setup](VOICE_SETUP.md).
+An isolated US LiveKit Builder prototype reports Running. After an inconclusive
+classroom attempt, a quiet consented test lasted 1 minute 48 seconds and produced
+the three expected return-window, Lamp One setup and refund-refusal replies. The
+owner confirmed the spoken interaction worked. Optional observability and
+recording were off. The console is idle and the microphone is muted; no caller
+audio is included. The observed pipeline was Deepgram Nova-3, Gemma 4 31B,
+Cartesia Sonic 3 and Python SDK 1.6.10. This is a three-scenario manual sample;
+acoustic interruption, injection resistance, recovery and representative latency
+remain unvalidated. The pinned SDK 1.8.6 code-owned launcher has not been used in
+a live room. See [voice setup](VOICE_SETUP.md) and [evaluation](EVALUATION.md).
 
-The owner then tried a short session in a noisy setting and reported not hearing
-replies. The console displayed recognition/model/synthesis usage, but listening
-quality is inconclusive. The console is now idle and the microphone is muted.
-No complete policy acceptance or successful audible conversation is claimed.
+The opt-in widget page adds three consent and cleanup checks to the twenty
+existing automated checks. Its two-minute timer unloads the browser panel; it is
+not a server usage or concurrency limit. The managed widget remains disabled
+until the owner approves public access and its allowed origin. No public voice
+operation is claimed at this preparation checkpoint.
 
 ## Historical October 10/11 checkpoint
 

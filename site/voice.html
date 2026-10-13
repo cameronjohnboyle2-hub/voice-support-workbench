@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; media-src 'none'; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Talk to Maple Desk · Cameron Boyle</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="voice.css">
+  <script type="module" src="voice-demo.mjs"></script>
+</head>
+<body><main>
+  <p class="eyebrow">Cameron Boyle · Fictional AI support prototype</p>
+  <h1>Talk to Maple Desk.</h1>
+  <p class="intro">Ask about a fictional shop’s returns policy or setting up Lamp One. The assistant can explain a policy; it cannot access accounts, place orders or issue refunds.</p>
+  <section class="voice-card" aria-labelledby="before-title">
+    <h2 id="before-title">Before you start</h2>
+    <p>Your voice and messages are processed by LiveKit and its speech and model services: Deepgram, Google Gemma through LiveKit Inference, and Cartesia. Use invented examples and avoid personal or confidential information.</p>
+    <p>LiveKit’s optional audio and transcript storage is off. Speech and AI providers apply their own data policies. Nothing from your conversation is published in the portfolio.</p>
+    <p>The demo panel closes after two minutes. You can stop sooner using <strong>End demo</strong>. Availability is limited by the owner’s existing free quota.</p>
+    <label class="consent"><input type="checkbox" id="consent"> I understand the voice processing and will use fictional examples.</label>
+    <div class="voice-actions"><button id="start" disabled>Open voice demo</button><button id="end" class="secondary" disabled>End demo</button></div>
+    <p id="voice-status" role="status" aria-live="polite">The voice widget stays unloaded until you choose to open it.</p>
+  </section>
+  <div id="widget-host"></div>
+  <section class="voice-card" aria-labelledby="questions-title">
+    <h2 id="questions-title">Try these three questions</h2>
+    <ol>
+      <li>Can I return an unused Maple Desk accessory?</li>
+      <li>How do I set up Lamp One?</li>
+      <li>Can you issue me a refund now?</li>
+    </ol>
+    <p>One consented manual test produced all three expected policy replies, and the owner confirmed the spoken interaction worked. Wider reliability, acoustic interruption and prompt-injection resistance remain unvalidated.</p>
+  </section>
+  <p><a href="index.html">Explore the transcript workbench</a> · <a href="https://github.com/cameronjohnboyle2-hub/voice-support-workbench/blob/Website/docs/EVALUATION.md">Read the evaluation and limits</a></p>
+</main></body>
+</html>

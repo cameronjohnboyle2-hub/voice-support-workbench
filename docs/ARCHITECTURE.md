@@ -1,6 +1,17 @@
 # Support architecture and boundaries
 
-The public replay is four static files. The reducer takes an event and a previous state, validates turn/call identities, and returns a new state. The view renders only the resulting authored transcript. A page content policy blocks outbound connections; no provider credential path exists.
+The transcript replay is four static files. The reducer takes an event and a previous state, validates turn/call identities, and returns a new state. The view renders only the resulting authored transcript. Its page content policy blocks outbound connections; no provider credential path exists.
+
+The separate opt-in voice page loads a same-origin embedded panel only after
+affirmative consent. That panel uses LiveKit's managed widget, a public agent
+identifier and an integrity-pinned vendor script. The dashboard must allow only
+the exact portfolio origin. The widget routes to the prompt-grounded Builder
+agent, with no business actions or external policy database. Camera and screen
+sharing remain unavailable. Removing the panel on withdrawal, End demo, page
+exit or a two-minute timer closes the browser integration; provider room cleanup
+must be verified separately. This timer is not a server admission, concurrency
+or usage limit. The origin allowlist is not authentication against non-browser
+clients. No general-purpose sandbox token server or signing key is published.
 
 The Python policy function is the code-owned boundary: accepted topics yield a source-tagged fictional policy; unknown topics yield human review. The optional SDK agent registers that function as a read-only tool. It starts no AgentSession, model, transport, microphone or persistence service.
 
