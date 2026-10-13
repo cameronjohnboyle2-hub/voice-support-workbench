@@ -34,7 +34,7 @@ The fictional shop is **Maple Desk**. All policies, product names and dialogue a
 
 `support/agent.py` registers the fictional policy function as a LiveKit Agents Python tool. The optional [controlled launcher](support/live.py) connects that agent to a speech/model/synthesis pipeline and limits a job to two minutes. Six offline SDK checks cover tool registration, policy output, real pipeline construction, missing configuration, deadline shutdown and failed-start cleanup. The launcher's live room/tool integration remains untested.
 
-A separate prompt-grounded prototype was deployed through LiveKit Agent Builder. A consented console session connected with speech recognition, model output and synthesis; scripted policy-task success and audible quality still need acceptance. This Builder prototype embeds the invented policies in its prompt and does not use the code-owned tool. No public voice widget or recording is enabled. See [voice setup and evidence boundaries](docs/VOICE_SETUP.md).
+A separate prompt-grounded prototype was deployed through LiveKit Agent Builder. On October 12, a consented manual test produced the expected return-window, Lamp One setup and refund-refusal replies, and the owner confirmed the spoken interaction worked. Optional observability and recording were off; the session ended after 1 minute 48 seconds. This Builder prototype embeds the invented policies in its prompt and does not use the code-owned tool. No caller audio is distributed. See [voice setup and evidence boundaries](docs/VOICE_SETUP.md).
 
 ```sh
 python -m venv .venv
@@ -44,7 +44,7 @@ python -m venv .venv
 
 On macOS/Linux use `.venv/bin/python` for the final two commands. The pinned environment was resolved on Python 3.12; other Python/platform combinations need their own compatible-wheel check.
 
-Acoustic interruption, answer grounding, room admission and representative latency still require their own acceptance. See [architecture](docs/ARCHITECTURE.md) and [evaluation plan](docs/EVALUATION.md). Provider connectivity or SDK construction alone does not establish those results.
+Acoustic interruption, prompt-injection resistance, provider recovery and representative latency still require their own acceptance. The three manual Builder replies support only those three checked scenarios. See [architecture](docs/ARCHITECTURE.md) and [evaluation plan](docs/EVALUATION.md).
 
 ## Contribution and rights
 
@@ -56,4 +56,4 @@ Original workbench code is presented for review with rights retained; no general
 
 The replay uses simulated event order and authored response text. Its counts are fixture checks, not task-success rates, measured model latency or cost savings. The optional launcher has provider configuration but supplies no public token endpoint, persistent logs, order mutation or actual human handoff. Its SDK may prewarm a connection when a configured pipeline is constructed; the offline construction test suppresses that HTTP prewarming.
 
-The next validation is completion of the consented fictional voice script, followed by a separate live check of the code-owned launcher. Use existing free quota where available; no paid upgrade is required. Public admission, concurrency and privacy controls would need their own review before a public voice service is enabled.
+The opt-in [voice page](site/voice.html) unloads its widget on consent withdrawal, End demo, page exit or a two-minute browser timer. Three automated checks cover its consent and cleanup behavior. The third-party widget bundle is integrity-pinned to the reviewed version. The managed widget must be separately enabled for the portfolio origin; its public operation remains unverified until that account setting and hosted acceptance are complete. The browser timer is not a server usage or concurrency limit. The code-owned launcher's live integration also needs a separate test. Use existing free quota where available; no paid upgrade is required.

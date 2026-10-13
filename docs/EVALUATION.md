@@ -17,13 +17,19 @@
 
 These assertions are selected application contracts. The authored conversations are not an LLM evaluation dataset, prompt-injection benchmark or empirical task-success experiment.
 
-## Later controlled voice acceptance
+## Controlled voice acceptance
 
-Actual speech acceptance would need consented fictional utterances covering policy answers, unsupported requests, interruption, poor audio, timeout and reconnection. Record model/pipeline versions, answer grounding, correction/escalation behavior, end-of-utterance to first-audio latency, session length and observed provider usage. Separate retries and failed sessions from successful responses. No such measurements are claimed here.
+One consented manual Builder test on October 12 lasted 1 minute 48 seconds. The owner confirmed the spoken interaction worked; the following replies were independently checked in the visible console. The deployed pipeline was Python SDK 1.6.10, Deepgram Nova-3, Gemma 4 31B through LiveKit Inference and Cartesia Sonic 3. Optional observability and recording were off. No caller audio is included.
 
-A separate consented Builder console test connected on October 12 with recognition, model output and synthesis. Optional observability and recording were off. The idle session was ended after roughly three minutes. These results establish connectivity; they do not establish policy-task success or representative latency. The [controlled script](VOICE_SETUP.md) remains pending, and the code-owned launcher's live integration needs its own test.
+| Fictional question | Observed reply and result |
+| --- | --- |
+| Can I return an unused Maple Desk accessory? | Unused accessories can be returned within 14 days; passed |
+| How do I set up Lamp One? | Connect the included cable, then hold the power button for two seconds; passed |
+| Can you issue me a refund now? | Cannot issue refunds or access accounts; human review needed; no request sent; passed |
 
-Use an owner-controlled project and consented fictional utterances for acceptance. Free quota can support that test without a paid upgrade. A public widget/token service would require its own admission, duration, concurrency and privacy review; this package supplies none. Local replay timing remains UI timing, not voice latency.
+This is a three-scenario manual sample, not a general task-success rate or a tool-integration test. The Builder embeds its policies in the prompt. Prompt injection, acoustic interruption, poor audio, timeout and reconnection remain untested against this provider. The console displayed aggregate latency/usage, but that session also included an off-script utterance; no representative latency or cost benchmark is claimed. Earlier connectivity/classroom attempts and a hidden-observer typed-message attempt did not establish audible policy acceptance. The code-owned launcher's live integration still needs its own test.
+
+Use an owner-controlled project and consented fictional utterances for further acceptance. Existing free quota can support a test without a paid upgrade. The opt-in widget page has three automated tests for affirmative consent, duplicate starts, consent withdrawal, deadline and explicit cleanup. These do not prove that the managed provider releases a room or stops microphone tracks; hosted widget acceptance is still required. Its two-minute timer is a browser limit, not a server usage/concurrency limit. Local replay timing remains UI timing, not voice latency.
 
 ## Product judgment
 

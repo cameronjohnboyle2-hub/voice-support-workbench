@@ -3,11 +3,12 @@
 The public website remains an authored, disconnected transcript replay. A separate
 Maple Desk voice prototype was configured in LiveKit Agent Builder on October 12,
 2026. Its deployment reported Running, and a consented console session connected
-with speech recognition, model output and speech synthesis. That establishes
-provider connectivity, not successful completion of the three policy scenarios.
-The owner subsequently tried a short session in a noisy setting and reported
-not hearing replies. Listening quality is inconclusive; microphone testing is
-stopped until a quiet setting is available. No user audio is included here.
+with speech recognition, model output and speech synthesis. A later quiet,
+consented manual test produced the expected replies to the return-window,
+Lamp One setup and refund-refusal questions, and the owner confirmed the spoken
+interaction worked. That session ended after 1 minute 48 seconds with the
+microphone muted. The earlier classroom attempt was inconclusive. No user audio
+is included here. These three checks do not establish general reliability.
 
 ## Two implementations, two evidence boundaries
 
@@ -71,6 +72,22 @@ Report actual answers, failures and whether speech was audible. Keep any optiona
 recording consent separate from microphone consent. Do not publish caller audio
 without permission. UI reducer checks do not demonstrate acoustic interruption;
 SDK binding checks do not demonstrate model compliance.
+
+## Managed widget preparation
+
+The separate `site/voice.html` page explains provider processing before loading
+the widget. The dashboard must enable only the exact portfolio origin
+`https://cameronjohnboyle2-hub.github.io`, with camera and screen share unavailable.
+The parent page removes its embedded panel on consent withdrawal, End demo, page
+exit, or after two minutes. This browser timer does not enforce server usage,
+room admission or concurrency. The widget's live hosted flow still needs its
+own acceptance after the owner enables it. Optional recording and observability
+must remain off. The embed script has a reviewed SHA-384 integrity value; a
+changed vendor bundle fails closed until its new source is reviewed.
+
+The origin restriction applies to the whole origin, not a repository path, and
+does not establish abuse resistance against clients outside a browser. No
+general-purpose sandbox token server or secret key is published.
 
 The setup follows LiveKit's [voice quickstart](https://docs.livekit.io/agents/start/voice-ai/)
 and [Agent Builder guide](https://docs.livekit.io/agents/start/builder/). Cameron's
