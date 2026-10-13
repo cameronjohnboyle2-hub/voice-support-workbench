@@ -22,9 +22,16 @@ a live room. See [voice setup](VOICE_SETUP.md) and [evaluation](EVALUATION.md).
 
 The opt-in widget page adds three consent and cleanup checks to the twenty
 existing automated checks. Its two-minute timer unloads the browser panel; it is
-not a server usage or concurrency limit. The managed widget remains disabled
-until the owner approves public access and its allowed origin. No public voice
-operation is claimed at this preparation checkpoint.
+not a server usage or concurrency limit. The owner approved the public release;
+the widget is enabled for the exact portfolio origin. PR #1 merged at
+`ee67a9e42557010aaf6a98df8f15264207bc2b04`, and [Pages publication](https://github.com/cameronjohnboyle2-hub/voice-support-workbench/actions/runs/38330031359)
+passed. All nine hosted runtime files exactly matched reviewed bytes through
+anonymous HTTPS. The owner confirmed hearing a spoken reply to the Lamp One setup
+question through the hosted page and reported ending the call. End demo removed
+the panel and consent was reset. Optional agent observability was again verified
+off. LiveKit subsequently showed the test room CLOSED after 49 seconds; the earlier
+three-question console test and this one reported audible hosted reply are separate evidence
+boundaries. No caller audio was recorded or published by this agent.
 
 ## Historical October 10/11 checkpoint
 

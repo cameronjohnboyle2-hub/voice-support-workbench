@@ -1,7 +1,10 @@
 # Controlled fictional voice setup
 
-The public website remains an authored, disconnected transcript replay. A separate
-Maple Desk voice prototype was configured in LiveKit Agent Builder on October 12,
+The public website offers an authored, disconnected transcript replay and a
+separate opt-in [live voice page](https://cameronjohnboyle2-hub.github.io/voice-support-workbench/voice.html).
+Maple Desk is an invented company for this new independent portfolio project;
+it is not a client or a migrated employer/research application. Its voice
+prototype was configured in LiveKit Agent Builder on October 12,
 2026. Its deployment reported Running, and a consented console session connected
 with speech recognition, model output and speech synthesis. A later quiet,
 consented manual test produced the expected replies to the return-window,
@@ -51,7 +54,8 @@ the website, Git history, screenshots or conversation transcripts.
 
 In the project's LiveKit console, explicitly dispatch `maple-desk-policy-demo`.
 Obtain the microphone user's consent before starting. The launcher is not a
-public admission/token service, and no widget or token endpoint is enabled here.
+public admission/token service. The managed Builder widget is separate from this
+launcher; no general-purpose development token server is enabled.
 Use the existing free quota where available; this example does not require a
 paid upgrade or external model API keys. Exhausted quota is a failed/unavailable
 test, not a reason to change the owner's spending preference.
@@ -73,16 +77,22 @@ recording consent separate from microphone consent. Do not publish caller audio
 without permission. UI reducer checks do not demonstrate acoustic interruption;
 SDK binding checks do not demonstrate model compliance.
 
-## Managed widget preparation
+## Published managed widget
 
 The separate `site/voice.html` page explains provider processing before loading
-the widget. The dashboard must enable only the exact portfolio origin
-`https://cameronjohnboyle2-hub.github.io`, with camera and screen share unavailable.
+the widget. The owner approved enabling only the exact portfolio origin
+`https://cameronjohnboyle2-hub.github.io`; its enabled setting persisted after a
+dashboard reload. Camera and screen share are unavailable. Optional observability
+remains off, verified again in the project settings after publication.
 The parent page removes its embedded panel on consent withdrawal, End demo, page
 exit, or after two minutes. This browser timer does not enforce server usage,
 room admission or concurrency. The widget's live hosted flow still needs its
-own acceptance after the owner enables it. Optional recording and observability
-must remain off. The embed script has a reviewed SHA-384 integrity value; a
+own acceptance. The owner confirmed hearing a spoken reply to the
+Lamp One setup question through the hosted page and reported ending the call.
+End demo removed the panel, leaving no iframe and consent unchecked. The provider
+dashboard subsequently showed the test room CLOSED after 49 seconds. This is one
+reported audible reply; the agent did not independently hear or record it. Optional recording
+and observability remain off. The embed script has a reviewed SHA-384 integrity value; a
 changed vendor bundle fails closed until its new source is reviewed.
 
 The origin restriction applies to the whole origin, not a repository path, and
